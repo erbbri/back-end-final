@@ -1,5 +1,4 @@
 const mongoose = require('mongoose');
-
 let Schema = mongoose.Schema;
 
 let BookSchema = new Schema({
@@ -9,4 +8,4 @@ let BookSchema = new Schema({
     price: Number,
 });
 
-module.exports = mongoose.model('Books', BookSchema);
+module.exports = mongoose.model('Book', BookSchema);
