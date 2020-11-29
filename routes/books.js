@@ -16,7 +16,7 @@ router.post('/', (request, response, next) => {
     if (!newBook.name || !newBook.author|| !newBook.isbn){
         HandleError(response, 'Missing Info', 'Form data missing', 500);
     }
-    else if (newBook.isbn.length !== 13 || newBook.isbn.length !== 10){
+    else if (newBook.isbn.length !== 13){
         HandleError(response, 'Incorrect ISBN', 'Incorrect ISBN Format (must be 10 or 13 digits)', 500);}
     else{
         let book = new BookSchema({
